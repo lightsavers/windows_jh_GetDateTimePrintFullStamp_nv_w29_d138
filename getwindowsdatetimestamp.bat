@@ -1,5 +1,7 @@
-
-REM author: lightsavers
+::
+:: author: lightsavers
+:: created: 06092022
+::
 
 @echo off
 for /f "tokens=2 delims==" %%a in ('wmic OS Get localdatetime /value') do set "dt=%%a"
@@ -8,15 +10,21 @@ set "HH=%dt:~8,2%" & set "Min=%dt:~10,2%" & set "Sec=%dt:~12,2%"
 set "datestamp=%YYYY%%MM%%DD%" & set "timestamp=%HH%%Min%%Sec%"
 set "fullstamp=%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%"
 
-REM Optional
+::
+:: Optional
+::
 echo datestamp: "%datestamp%"
 
-REM Optional
+::
+:: Optional
+::
 echo timestamp: "%timestamp%"
 
-REM Required
+::
+:: Required
+::
 echo fullstamp: "%fullstamp%"
 
-REM To run, open a Command Prompt (CMD) window
-REM switch to directory that host bat file
-REM type filaname and press enter
+:: To run, open a Command Prompt (CMD) window
+:: switch to directory that host bat file
+:: type filaname and press enter
